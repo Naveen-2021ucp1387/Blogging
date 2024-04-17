@@ -12,6 +12,7 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
         control={control}
         render={({ field: { onChange } }) => (
           <Editor
+            apiKey="l9nwalzjzkmn969cmz14nd9lefp42s3cpx2plcunocxb55m5"
             initialValue={defaultValue}
             init={{
               initialValue: defaultValue,
@@ -40,9 +41,9 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
                 "anchor",
               ],
               toolbar:
-                "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help",
+                "undo redo | formatselect | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help",
               content_style:
-                "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+                "body { font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #fff; background-color: #333; }",
             }}
             onEditorChange={onChange}
           />

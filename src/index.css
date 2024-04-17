@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Dark theme */
+.dark-mode {
+  --bg-color: #1f2937; /* Dark blue-gray background color */
+  --text-color: #f3f4f6; /* Light gray text color */
+  --primary-color: #10b981; /* Green primary color */
+  --secondary-color: #f59e0b; /* Orange secondary color */
+}
+
+/* Apply dark mode to body */
+.dark-mode body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Apply dark mode to specific elements as needed */
+.dark-mode .logo:hover {
+  filter: drop-shadow(0 0 0.5rem var(--primary-color)); /* Green color */
+}
+
+.dark-mode .logo.react:hover {
+  filter: drop-shadow(0 0 0.5rem var(--secondary-color)); /* Orange color */
+}
+
+/* Customize other elements with dark mode */
+.dark-mode .card {
+  background-color: #374151; /* Dark gray background color for cards */
+  color: #d1d5db; /* Light gray text color for cards */
+}
+
+.dark-mode .read-the-docs {
+  color: #ccc; /* Light gray color for read-the-docs link */
+}
+
+/* Utility classes for dark mode */
+.dark-mode .bg-primary {
+  background-color: var(--primary-color);
+}
+
+.dark-mode .text-primary {
+  color: var(--primary-color);
+}
+
+.dark-mode .bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.dark-mode .text-secondary {
+  color: var(--secondary-color);
+}
+
+@tailwind utilities;

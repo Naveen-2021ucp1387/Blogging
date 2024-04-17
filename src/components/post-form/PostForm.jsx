@@ -77,7 +77,10 @@ export default function PostForm({ post }) {
   }, [watch, slugTransform, setValue]);
 
   return (
-    <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
+    <form
+      onSubmit={handleSubmit(submit)}
+      className="flex flex-wrap bg-gray-900 p-4"
+    >
       <div className="w-2/3 px-2">
         <Input
           label="Title :"
@@ -129,7 +132,7 @@ export default function PostForm({ post }) {
         <Button
           type="submit"
           bgColor={post ? "bg-green-500" : undefined}
-          className="w-full"
+          className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded"
         >
           {post ? "Update" : "Submit"}
         </Button>

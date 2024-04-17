@@ -19,7 +19,7 @@ export class Service {
       return await this.databases.createDocument(
         conf.appwriteDatabaseId,
         conf.appwriteCollectionId,
-        slug,
+        ID.unique(), // Generate a unique ID automatically
         {
           title,
           content,
@@ -27,11 +27,15 @@ export class Service {
           status,
           userId,
         }
-      )
+      );
     } catch (error) {
       console.log("Appwrite serive :: createPost :: error", error);
     }
   }
+
+
+
+
 
   async updatePost(slug, { title, content, featuredImage, status }) {
     try {
@@ -135,3 +139,4 @@ export class Service {
 
 const service = new Service()
 export default service
+

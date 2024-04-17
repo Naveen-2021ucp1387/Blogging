@@ -27,23 +27,21 @@ function Signup() {
   };
 
   return (
-    <div className="flex items-center justify-center">
-      <div
-        className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}
-      >
+    <div className="flex items-center justify-center bg-gray-900 h-screen">
+      <div className="mx-auto w-full max-w-lg bg-gray-800 rounded-xl p-10 border border-gray-700">
         <div className="mb-2 flex justify-center">
           <span className="inline-block w-full max-w-[100px]">
             <Logo width="100%" />
           </span>
         </div>
-        <h2 className="text-center text-2xl font-bold leading-tight">
-          Sign up to create account
+        <h2 className="text-center text-2xl font-bold leading-tight text-white">
+          Sign up to create an account
         </h2>
-        <p className="mt-2 text-center text-base text-black/60">
+        <p className="mt-2 text-center text-base text-gray-300">
           Already have an account?&nbsp;
           <Link
             to="/login"
-            className="font-medium text-primary transition-all duration-200 hover:underline"
+            className="font-medium text-green-400 transition-all duration-200 hover:underline"
           >
             Sign In
           </Link>
@@ -55,6 +53,7 @@ function Signup() {
             <Input
               label="Full Name: "
               placeholder="Enter your full name"
+              className="text-white"
               {...register("name", {
                 required: true,
               })}
@@ -63,6 +62,7 @@ function Signup() {
               label="Email: "
               placeholder="Enter your email"
               type="email"
+              className="text-white"
               {...register("email", {
                 required: true,
                 validate: {
@@ -76,11 +76,12 @@ function Signup() {
               label="Password: "
               type="password"
               placeholder="Enter your password"
+              className="text-white"
               {...register("password", {
                 required: true,
               })}
             />
-            <Button type="submit" className="w-full">
+            <Button type="submit" bgColor="bg-green-400" className="w-full">
               Create Account
             </Button>
           </div>
